@@ -1,0 +1,21 @@
+/* Global styles for body and html */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+  }
+  
+  #root {
+    min-height: 100%;  /* Ensures the main container takes up the full height */
+    display: flex;
+    flex-direction: column;  /* Stack elements vertically */
+  }
+  
+  .main-content {
+    flex: 1;  /* This makes sure the content area takes up the available space */
+  }
+  
+  footer {
+    margin-top: auto;  /* Pushes the footer to the bottom */
+  }
+  

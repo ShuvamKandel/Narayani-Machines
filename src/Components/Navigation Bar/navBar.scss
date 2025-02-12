@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Graduate&family=Inclusive+Sans&display=swap');
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 0 60px;
+    text-transform: uppercase;
+    z-index: 1000;
+    box-sizing: border-box;
+    margin: 0px;
+    padding-bottom: 0px;
+
+    a {
+        color: white;
+        font-family: 'Inclusive Sans', sans-serif;
+        text-decoration: none;
+        font-size: 14px;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: #FFC500;
+        }
+    }
+
+    .left {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        .logo {
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            font-family: 'Graduate', sans-serif;
+            color: white;
+
+            h1 {
+                display: flex;
+                line-height: 1;
+                flex-direction: column;
+                text-align: left;
+                padding-right: 50px;
+                font-weight: normal;
+            }
+        }
+    }
+
+    .nav-links {
+        display: flex;
+        font-size: 12px;
+        gap: 50px;
+    }
+
+    .right {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        .SearchImage {
+            width: 30px;
+            height: 30px;
+        }
+
+        .location {
+            display: flex;
+            align-items: center;
+            color: white;
+            padding-left: 20px;
+
+            img {
+                width: 20px;
+                height: auto;
+            }
+        }
+    }
+
+    // Mobile Menu Button (Hamburger)
+    .menu-toggle {
+        display: none;
+        font-size: 30px;
+        cursor: pointer;
+        color: white;
+    }
+
+    // ** Mobile View Activates Below 1200px **
+    @media screen and (max-width: 1200px) {
+        .nav-links {
+            display: none;  // Hide links in mobile view
+            flex-direction: column;
+            position: absolute;
+            top: 80px;
+            left: 0;
+            width: 100%;
+            background: black;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .nav-links.active {
+            display: flex;  // Show links when active
+        }
+
+        .menu-toggle {
+            display: block;  // Show menu icon in mobile
+        }
+    }
+
+    // ** Reduce Gaps and Padding for Screens Below 1300px **
+    @media screen and (max-width: 1300px) {
+        .nav-links {
+            gap: 30px;  // Reduced gap between links
+            font-size: 13px;  // Slightly smaller font
+        }
+
+        padding: 0 40px;  // Reduced padding
+    }
+
+    // ** Further Reductions for Mobile View Below 768px **
+    @media screen and (max-width: 768px) {
+        padding: 0 10px;  // Reduce padding for smaller screens
+
+        .nav-links {
+            gap: 20px;  // Reduced gap between links even further
+            font-size: 11px;
+        }
+    }
+}
+
+body {
+    padding-top: 72px;
+    margin: 0;
+    background-color: #FFF7F7;
+    padding-bottom: 50px;
+}

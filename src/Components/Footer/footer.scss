@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Semi+Condensed:wght@400&display=swap');
+
+.footer {
+  background-color: #000000;
+  color: #fff;
+  padding: 20px 0;
+  font-family: 'Sofia Sans Semi Condensed', sans-serif;
+  position: relative;
+  width: 100%;
+  margin-top: 30px;
+  height: 170px;
+
+  .footer__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+  }
+
+  /* Left aligned links */
+  .footer__left {
+    display: flex;
+    gap: 20px;
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin: 5px 0;
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.1em;
+    }
+
+    a:hover {
+      color: #FFCD11;
+    }
+  }
+
+  /* Center aligned contact info */
+  .footer__center {
+    text-align: center;
+    justify-content: center;
+    flex-grow: 1;
+    padding: 10px 0;
+
+    p {
+      margin: 5px 0;  /* Add margin to separate the numbers */
+      font-size: 1.2em;
+    }
+  }
+
+  /* Right aligned social media links */
+  .footer__right {
+    display: flex;
+    gap: 15px;
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin: 5px 0;
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.2em;
+    }
+
+    a:hover {
+      color: #FFCD11;
+    }
+  }
+
+  /* Yellow line at the bottom */
+  &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: #FFCD11;  /* Yellow line */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  /* Responsive styling */
+  @media (max-width: 768px) {
+    .footer__content {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .footer__left, .footer__right {
+      justify-content: center;
+    }
+
+    .footer__center {
+      margin-top: 10px;
+    }
+  }
+}
