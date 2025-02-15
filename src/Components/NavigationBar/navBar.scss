@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Graduate&family=Inclusive+Sans&display=swap');
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px; // Slightly reduced height for smaller screens
+    padding: 0 50px;
+    text-transform: uppercase;
+    z-index: 1000;
+    box-sizing: border-box;
+    margin: 0;
+
+    a {
+        color: white;
+        font-family: 'Inclusive Sans', sans-serif;
+        text-decoration: none;
+        font-size: 14px;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: #FFC500;
+        }
+    }
+
+    .left {
+        display: flex;
+        align-items: center;
+        gap: 15px; // Reduce spacing slightly
+
+        .logo {
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            font-family: 'Graduate', sans-serif;
+            color: white;
+
+            h1 {
+                display: flex;
+                line-height: 1;
+                flex-direction: column;
+                text-align: left;
+                padding-right: 30px; // Reduced padding
+                font-weight: normal;
+                font-size: 18px; // Adjusted for smaller screens
+            }
+        }
+    }
+
+    .nav-links {
+        display: flex;
+        font-size: 12px;
+        gap: 40px; // Slightly reduced gap
+    }
+
+    .right {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        .location {
+            display: flex;
+            align-items: center;
+            color: white;
+            padding-left: 15px;
+
+            img {
+                width: 18px;
+                height: auto;
+            }
+        }
+    }
+
+    // Mobile Menu Button (Hamburger)
+    .menu-toggle {
+        display: none;
+        font-size: 28px;
+        cursor: pointer;
+        color: white;
+    }
+
+    // ** Adjustments for Tablets and Small Laptops (Below 1200px) **
+    @media screen and (max-width: 1200px) {
+        .nav-links {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 70px;
+            left: 0;
+            width: 100%;
+            background: black;
+            padding: 15px 0;
+            text-align: center;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .nav-links.active {
+            display: flex;
+        }
+
+        .menu-toggle {
+            display: block;
+        }
+    }
+
+    // ** Adjustments for Smaller Screens (Below 992px) **
+    @media screen and (max-width: 992px) {
+        padding: 0 30px; // Reduce horizontal padding
+
+        .nav-links {
+            gap: 25px;
+            font-size: 12px;
+        }
+    }
+
+    // ** Further Adjustments for Mobile View (Below 768px) **
+    @media screen and (max-width: 768px) {
+        padding: 0 15px;
+
+        .nav-links {
+            gap: 20px;
+            font-size: 11px;
+            padding: 10px 0;
+        }
+
+        .right {
+            gap: 8px;
+        }
+
+        .menu-toggle {
+            font-size: 26px;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+
+
+        .left .logo h1 {
+            font-size: 16px;
+            padding-right: 15px;
+        }
+
+        .menu-toggle {
+            font-size: 24px;
+        }
+
+        .nav-links {
+            font-size: 10px;
+            gap: 15px;
+            padding: 8px 0;
+        }
+    }
+}
+
+body {
+    padding-top: 70px;
+    margin: 0;
+    background-color: #FFF7F7;
+    padding-bottom: 50px;
+}

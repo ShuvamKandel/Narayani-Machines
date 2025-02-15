@@ -96,18 +96,15 @@
   }
 
   /* Responsive styling */
-  @media (max-width: 768px) {
-    .footer__content {
-      flex-direction: column;
-      align-items: center;
+  @media (max-width: 550px) {
+    .footer__center{
+      font-size: 13px;
     }
-
-    .footer__left, .footer__right {
-      justify-content: center;
+    .footer__left{
+      font-size: 13px;
     }
-
-    .footer__center {
-      margin-top: 10px;
+    .footer__right{
+      font-size: 13px;
     }
   }
 }
